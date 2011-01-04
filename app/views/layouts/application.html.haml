@@ -1,0 +1,29 @@
+!!!
+%html
+  %head
+    %meta{ :charset => "utf-8" }
+    %title Simple_Autocomplete Demo
+    = stylesheet_link_tag 'scaffold', 'jquery.autocomplete'
+    = csrf_meta_tag
+
+  %body
+    %header
+      %nav
+        = link_to "List all People", people_path
+        |
+        = link_to "Create a new Person", new_person_path
+        |
+        %span
+          = form_tag person_finder_path, :method => :get do
+            = text_field_tag :name, "", :class => 'autocomplete', 'data-autocomplete-url' => autocomplete_for_person_name_people_path
+            = submit_tag "Find Person"
+
+      .flash
+        - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}", :class => "message"
+
+    %article
+      = yield
+
+  = google_jquery
+  = javascript_include_tag "jquery.autocomplete.js", "autocomplete-hook.js"

@@ -1,0 +1,6 @@
+%h1 People
+
+%ul
+  - @people.each do |person|
+    %li= link_to person.name, edit_person_path(person)
+

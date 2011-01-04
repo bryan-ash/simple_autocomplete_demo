@@ -1,0 +1,7 @@
+= form_for @person do |form|
+  %section
+    %h2= form.label :name, "Enter the name of the person"
+    = form.text_field :name
+
+  %section
+    = form.submit
