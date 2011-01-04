@@ -7,7 +7,7 @@
 #     - <Heroku config:var name>: <Heroku config:var value>
 #
 production: 
-  app: simple-autocomplete
+  app: simple-autocomplete-demo
   config:
     - BUNDLE_WITHOUT: "development:test"
 

@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/bryan-ash/heroku_san.git
+  revision: 6cca6fa90dfdcf22cdedc4dda1cfe487db4cbff7
+  specs:
+    heroku_san (1.0.7)
+      heroku
+      heroku
+      jeweler
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -33,16 +42,17 @@ GEM
     configuration (1.2.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
+    git (1.2.5)
     haml (3.0.25)
     heroku (1.15.1)
       json_pure (>= 1.2.0, < 1.5.0)
       launchy (~> 0.3.2)
       rest-client (>= 1.4.0, < 1.7.0)
-    heroku_san (1.0.7)
-      heroku
-      heroku_san
-      rails (>= 3)
     i18n (0.5.0)
+    jeweler (1.5.2)
+      bundler (~> 1.0.0)
+      git (>= 1.2.5)
+      rake
     json_pure (1.4.6)
     launchy (0.3.7)
       configuration (>= 0.0.5)
@@ -58,7 +68,7 @@ GEM
     rack (1.2.1)
     rack-mount (0.6.13)
       rack (>= 1.0.0)
-    rack-test (0.5.6)
+    rack-test (0.5.7)
       rack (>= 1.0)
     rails (3.0.3)
       actionmailer (= 3.0.3)
@@ -87,7 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   haml
-  heroku_san
+  heroku_san!
   pg
   rails
   simple_autocomplete
